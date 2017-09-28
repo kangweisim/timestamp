@@ -12,6 +12,8 @@ app.get('/:date', (req, res) => {
 			natural: natural.replace(regExp, "$1 $2 $3")
 		}
 		res.end(JSON.stringify(data));
+	} else {
+		res.end(JSON.stringify({unix: null, natural:null}));
 	}
 });
 
